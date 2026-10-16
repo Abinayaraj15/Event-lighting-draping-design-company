@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <!-- Background Radial Glow -->
+    <radialGradient id="ambience" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#e6b76e" stop-opacity="0.3" />
+      <stop offset="60%" stop-color="#0e121a" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#080a0f" stop-opacity="1" />
+    </radialGradient>
+
+    <!-- Radiant Gold Linear Gradient -->
+    <linearGradient id="goldGleam" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fff8e7" />
+      <stop offset="40%" stop-color="#fbd38d" />
+      <stop offset="75%" stop-color="#e6b76e" />
+      <stop offset="100%" stop-color="#b8860b" />
+    </linearGradient>
+
+    <!-- Soft Glow Filter -->
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="1.5" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Dark Obsidian Base with Rounded Corners -->
+  <rect width="64" height="64" rx="16" fill="url(#ambience)" />
+
+  <!-- Subtle Champagne Gold Border -->
+  <rect x="1.5" y="1.5" width="61" height="61" rx="14.5" fill="none" stroke="#e6b76e" stroke-width="1.5" stroke-opacity="0.45" />
+
+  <!-- Secondary Diagonal Ambient Rays -->
+  <g stroke="#fbd38d" stroke-width="1" stroke-opacity="0.35" stroke-linecap="round">
+    <line x1="22" y1="22" x2="17" y2="17" />
+    <line x1="42" y1="22" x2="47" y2="17" />
+    <line x1="22" y1="42" x2="17" y2="47" />
+    <line x1="42" y1="42" x2="47" y2="47" />
+  </g>
+
+  <!-- Central Chandelier & Radiant Light Emblem (scaled and centered from 24x24) -->
+  <g transform="translate(11, 11) scale(1.75)" filter="url(#softGlow)">
+    <path fill="url(#goldGleam)" d="M12 2a1 1 0 0 1 1 1v2.07c3.61.45 6.48 3.32 6.93 6.93H22a1 1 0 0 1 0 2h-2.07c-.45 3.61-3.32 6.48-6.93 6.93V21a1 1 0 0 1-2 0v-2.07c-3.61-.45-6.48-3.32-6.93-6.93H2a1 1 0 0 1 0-2h2.07c.45-3.61 3.32-6.48 6.93-6.93V3a1 1 0 0 1 1-1zm0 5.1c-2.7 0-4.9 2.2-4.9 4.9s2.2 4.9 4.9 4.9 4.9-2.2 4.9-4.9-2.2-4.9-4.9-4.9z"/>
+  </g>
+
+  <!-- Core Radiant Filament Highlight -->
+  <circle cx="32" cy="32" r="3.2" fill="#fffdfa" />
+  <circle cx="32" cy="32" r="5" fill="#fbd38d" fill-opacity="0.45" />
+</svg>

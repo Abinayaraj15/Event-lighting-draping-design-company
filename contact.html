@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="amber">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact &amp; Enquiry | LUMINA &amp; VEIL Event Lighting &amp; Draping</title>
+  <meta name="description" content="Request a bespoke event lighting proposal. Check availability for your wedding, gala, or corporate event with our lighting and fabric designers.">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="alternate icon" href="favicon.ico">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+</head>
+<body>
+  <div class="ambient-beam" aria-hidden="true"></div>
+
+  <!-- Main Sticky Header (Single Top Element) -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo" aria-label="Lumina and Veil Home">
+        <div class="brand-icon">
+          <svg viewBox="0 0 24 24">
+            <path d="M12 2a1 1 0 0 1 1 1v2.07c3.61.45 6.48 3.32 6.93 6.93H22a1 1 0 0 1 0 2h-2.07c-.45 3.61-3.32 6.48-6.93 6.93V21a1 1 0 0 1-2 0v-2.07c-3.61-.45-6.48-3.32-6.93-6.93H2a1 1 0 0 1 0-2h2.07c.45-3.61 3.32-6.48 6.93-6.93V3a1 1 0 0 1 1-1zm0 5.1c-2.7 0-4.9 2.2-4.9 4.9s2.2 4.9 4.9 4.9 4.9-2.2 4.9-4.9-2.2-4.9-4.9-4.9z"/>
+          </svg>
+        </div>
+        <div class="brand-text">
+          LUMINA &amp; VEIL
+          <span>Event Lighting &amp; Draping</span>
+        </div>
+      </a>
+
+      <nav aria-label="Primary Navigation">
+        <ul class="nav-menu">
+          <li class="nav-item has-dropdown">
+            <button class="nav-link dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+              <span>Home</span>
+              <svg class="chevron-icon" width="10" height="10" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 4.5l3.5 3.5 3.5-3.5"/></svg>
+            </button>
+            <div class="nav-dropdown">
+              <a href="index.html" class="dropdown-item">
+                <div class="dropdown-item-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2a1 1 0 0 1 1 1v2.07c3.61.45 6.48 3.32 6.93 6.93H22a1 1 0 0 1 0 2h-2.07c-.45 3.61-3.32 6.48-6.93 6.93V21a1 1 0 0 1-2 0v-2.07c-3.61-.45-6.48-3.32-6.93-6.93H2a1 1 0 0 1 0-2h2.07c.45-3.61 3.32-6.48 6.93-6.93V3a1 1 0 0 1 1-1zm0 5.1c-2.7 0-4.9 2.2-4.9 4.9s2.2 4.9 4.9 4.9 4.9-2.2 4.9-4.9-2.2-4.9-4.9-4.9z"/>
+                  </svg>
+                </div>
+                <div class="dropdown-item-text">
+                  <strong>Architectural Lighting</strong>
+                  <span>Ballroom transformations, uplighting &amp; live DMX</span>
+                </div>
+              </a>
+              <a href="home-2.html" class="dropdown-item">
+                <div class="dropdown-item-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M3 4h18"/>
+                    <path d="M5 4c0 7 3.5 11 7 11s7-4 7-11"/>
+                    <path d="M8 4c0 9 2 14 4 16 2-2 4-7 4-16"/>
+                    <path d="M5 15v5"/>
+                    <path d="M19 15v5"/>
+                  </svg>
+                </div>
+                <div class="dropdown-item-text">
+                  <strong>Fabric Draping</strong>
+                  <span>Ceiling starburst canopies, wall wraps &amp; textiles</span>
+                </div>
+              </a>
+            </div>
+          </li>
+          <li class="nav-item"><a href="services.html">Services &amp; Uplighting</a></li>
+          <li class="nav-item"><a href="gallery.html">Visual Gallery</a></li>
+          <li class="nav-item"><a href="about.html">Our Studio</a></li>
+          <li class="nav-item"><a href="contact.html" class="active">Contact &amp; Enquiry</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- RTL Toggle CTA Button -->
+        <button class="nav-pill-btn rtl-toggle-btn" aria-label="Toggle text direction">&#8644; RTL</button>
+
+        <!-- Light / Dark Mode Toggle Button -->
+        <button class="nav-pill-btn theme-mode-toggle" aria-label="Toggle light and dark mode" title="Toggle Light / Dark mode">
+          <span class="theme-mode-icon">&#127769;</span>
+          <span class="theme-mode-text">Dark</span>
+        </button>
+
+        <a href="contact.html" class="btn btn-primary btn-sm">Request Proposal</a>
+        <button class="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">&#9776;</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Contact Hero with Background Image -->
+    <section class="about-hero hero-contact">
+      <div class="container text-center" style="text-align: center; max-width: 860px; margin: 0 auto; position: relative; z-index: 2;">
+        <div class="eyebrow">
+          <span class="eyebrow-dot"></span> Date Reservation &amp; Inquiries
+        </div>
+        <h1>Let's Illuminate Your <span class="glow-text">Celebration</span></h1>
+        <p style="margin-top: 18px; font-size: 1.15rem;">
+          Tell us about your event, venue architecture, and aesthetic dreams. We will draft an itemized lighting proposal and 3D visual simulation tailored to your floor plan.
+        </p>
+      </div>
+      <div class="hero-section-cutter" aria-hidden="true">
+        <div class="cutter-gem">
+          <svg width="12" height="12" viewBox="0 0 24 24"><path d="M12 2L14.5 9.5L22 12L14.5 14.5L12 22L9.5 14.5L2 12L9.5 9.5L12 2Z"/></svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Contact Section -->
+    <section class="contact-section">
+      <div class="container contact-layout">
+        <!-- Left Column: Studio Details & Consultation Process -->
+        <aside class="contact-info-card">
+          <h3 style="margin-bottom: 24px;">Studio Concierge</h3>
+
+          <div class="contact-info-item">
+            <div class="contact-icon-box">
+              <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            </div>
+            <div class="contact-text">
+              <h4>Design Studio &amp; Warehouse</h4>
+              <p>742 Luminous Way, Suite 400<br>Design District, Los Angeles, CA 90048</p>
+              <a href="#location-map" class="studio-map-jump-link">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                <span>View on Interactive Map &darr;</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="contact-info-item">
+            <div class="contact-icon-box">
+              <svg viewBox="0 0 24 24"><path d="M20 15.5c-1.25 0-2.45-.2-3.57-.57a1.02 1.02 0 0 0-1.02.24l-2.2 2.2a15.045 15.045 0 0 1-6.59-6.59l2.2-2.21a.96.96 0 0 0 .25-1A11.36 11.36 0 0 1 8.5 4c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.5c0-.55-.45-1-1-1z"/></svg>
+            </div>
+            <div class="contact-text">
+              <h4>Direct Telephone</h4>
+              <p><a href="tel:8005864621">(800) 586-4621</a></p>
+              <p style="font-size: 0.8rem; color: var(--text-dim);">Mon &ndash; Fri: 9:00 AM &ndash; 6:00 PM PST</p>
+            </div>
+          </div>
+
+          <div class="contact-info-item">
+            <div class="contact-icon-box">
+              <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            </div>
+            <div class="contact-text">
+              <h4>Direct Email</h4>
+              <p><a href="mailto:concierge@lumina-veil.com">concierge@lumina-veil.com</a></p>
+            </div>
+          </div>
+
+          <div style="border-top: 1px solid var(--border-subtle); padding-top: 24px; margin-top: 30px;">
+            <h4 style="font-size: 1rem; color: #ffffff; margin-bottom: 12px;">What Happens Next?</h4>
+            <ol style="padding-left: 20px; color: var(--text-muted); font-size: 0.88rem; display: flex; flex-direction: column; gap: 8px;">
+              <li><strong>Review (24 hrs):</strong> We check date availability and venue rigging rules.</li>
+              <li><strong>Discovery Call:</strong> 20-min consult to align on colors, focal points, and florals.</li>
+              <li><strong>3D Simulation:</strong> Full photometric proposal with itemized pricing.</li>
+            </ol>
+          </div>
+
+          <div style="margin-top: 28px; background: rgba(255, 255, 255, 0.03); border: 1px solid var(--border-subtle); border-radius: var(--radius-sm); padding: 18px;">
+            <p style="font-size: 0.82rem; color: var(--glow-secondary);">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="vertical-align: -2px; margin-right: 4px;"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <em>"If you pre-calculated an estimate on our Services page, your specs are automatically linked below!"</em>
+            </p>
+          </div>
+
+          <!-- The Lumina & Veil Production Guarantees -->
+          <div class="contact-guarantee-box">
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px;">
+              <h4 class="contact-subheading" style="margin: 0;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                <span>Production Guarantees</span>
+              </h4>
+              <span class="guarantee-badge">Zero Failure</span>
+            </div>
+
+            <div class="guarantee-list">
+              <div class="guarantee-item">
+                <div class="guarantee-icon">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </div>
+                <div class="guarantee-content">
+                  <h5>100% Hot-Standby Equipment Redundancy</h5>
+                  <p>Every show includes backup wireless DMX transceivers, spare battery fixtures, and duplicate controllers on site.</p>
+                </div>
+              </div>
+
+              <div class="guarantee-item">
+                <div class="guarantee-icon">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </div>
+                <div class="guarantee-content">
+                  <h5>Zero-Tape &amp; Cable-Free Aesthetic</h5>
+                  <p>Battery-powered fixtures and concealed architectural cabling eliminate ugly yellow tapes and trip hazards across guest paths.</p>
+                </div>
+              </div>
+
+              <div class="guarantee-item">
+                <div class="guarantee-icon">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </div>
+                <div class="guarantee-content">
+                  <h5>NFPA 701 Flame Marshal Certified</h5>
+                  <p>All drapery fabrics carry official state fire marshal certificates on-site for immediate venue compliance sign-off.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Live Calendar Status & Fast Turnaround Badge -->
+          <div class="contact-calendar-status-badge">
+            <div class="calendar-status-dot"></div>
+            <div>
+              <div class="contact-calendar-status-title">2026 / 2027 Dates Open</div>
+              <div class="contact-calendar-status-sub">Fast 24-Hour Photometric Proposal Turnaround</div>
+            </div>
+          </div>
+        </aside>
+
+        <!-- Right Column: Comprehensive Custom Enquiry Form -->
+        <div class="enquiry-form-card">
+          <div style="margin-bottom: 24px;">
+            <div class="eyebrow">
+              <span class="eyebrow-dot"></span> Custom Proposal Request
+            </div>
+            <h2>Tell Us About <span class="glow-text">Your Event</span></h2>
+            <p>Fill out the details below. We review each enquiry personally.</p>
+          </div>
+
+          <form id="eventEnquiryForm" novalidate>
+            <!-- Step 1: Contact Details -->
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label for="fullName">Your Full Name *</label>
+                <input type="text" id="fullName" name="fullName" class="form-control" placeholder="e.g. Eleanor Vance" minlength="2" required autocomplete="name">
+                <span class="field-error-msg" id="fullNameError" style="display: none;"></span>
+              </div>
+              <div class="form-group">
+                <label for="email">Email Address *</label>
+                <input type="email" id="email" name="email" class="form-control" placeholder="name@gmail.com" required autocomplete="email">
+                <div class="email-domain-chips" id="emailDomainChips">
+                  <button type="button" class="domain-chip" data-domain="@gmail.com">+ @gmail.com</button>
+                  <button type="button" class="domain-chip" data-domain="@yahoo.com">+ @yahoo.com</button>
+                  <button type="button" class="domain-chip" data-domain="@outlook.com">+ @outlook.com</button>
+                  <button type="button" class="domain-chip" data-domain="@icloud.com">+ @icloud.com</button>
+                </div>
+                <span class="field-error-msg" id="emailError" style="display: none;"></span>
+              </div>
+            </div>
+
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label for="phone">Phone Number *</label>
+                <div class="phone-input-group">
+                  <select id="countryCode" name="countryCode" class="form-control country-select" aria-label="Country Calling Code">
+                    <option value="+1" data-placeholder="(555) 234-5678" selected>🇺🇸 +1 (US)</option>
+                    <option value="+1" data-placeholder="(555) 234-5678">🇨🇦 +1 (CA)</option>
+                    <option value="+44" data-placeholder="7911 123456">🇬🇧 +44 (UK)</option>
+                    <option value="+61" data-placeholder="412 345 678">🇦🇺 +61 (AU)</option>
+                    <option value="+91" data-placeholder="98765 43210">🇮🇳 +91 (IN)</option>
+                    <option value="+971" data-placeholder="50 123 4567">🇦🇪 +971 (UAE)</option>
+                    <option value="+33" data-placeholder="6 12 34 56 78">🇫🇷 +33 (FR)</option>
+                    <option value="+49" data-placeholder="151 23456789">🇩🇪 +49 (DE)</option>
+                    <option value="+39" data-placeholder="312 345 6789">🇮🇹 +39 (IT)</option>
+                    <option value="+34" data-placeholder="612 34 56 78">🇪🇸 +34 (ES)</option>
+                    <option value="+41" data-placeholder="78 123 45 67">🇨🇭 +41 (CH)</option>
+                    <option value="+65" data-placeholder="8123 4567">🇸🇬 +65 (SG)</option>
+                    <option value="+81" data-placeholder="90 1234 5678">🇯🇵 +81 (JP)</option>
+                    <option value="+86" data-placeholder="138 0013 8000">🇨🇳 +86 (CN)</option>
+                    <option value="+52" data-placeholder="55 1234 5678">🇲🇽 +52 (MX)</option>
+                    <option value="+55" data-placeholder="11 91234-5678">🇧🇷 +55 (BR)</option>
+                    <option value="+27" data-placeholder="71 123 4567">🇿🇦 +27 (ZA)</option>
+                    <option value="+966" data-placeholder="50 123 4567">🇸🇦 +966 (SA)</option>
+                    <option value="+974" data-placeholder="5512 3456">🇶🇦 +974 (QA)</option>
+                    <option value="+64" data-placeholder="21 123 4567">🇳🇿 +64 (NZ)</option>
+                    <option value="+353" data-placeholder="85 123 4567">🇮🇪 +353 (IE)</option>
+                    <option value="+31" data-placeholder="6 12345678">🇳🇱 +31 (NL)</option>
+                    <option value="+46" data-placeholder="70 123 45 67">🇸🇪 +46 (SE)</option>
+                  </select>
+                  <input type="tel" id="phone" name="phone" class="form-control phone-number-input" placeholder="(555) 234-5678" required autocomplete="tel-national">
+                </div>
+                <span class="field-error-msg" id="phoneError" style="display: none;"></span>
+              </div>
+              <div class="form-group">
+                <label for="eventType">Celebration / Event Type *</label>
+                <select id="eventType" name="eventType" class="form-control" required>
+                  <option value="Wedding">Luxury Wedding Reception &amp; Ceremony</option>
+                  <option value="Gala">Charity / High-Profile Gala</option>
+                  <option value="Corporate">Corporate Summit / Brand Launch</option>
+                  <option value="Private">Private Estate Celebration</option>
+                  <option value="Other">Other Bespoke Event</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Step 2: Date & Venue Info -->
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label for="eventDate">Event Date *</label>
+                <input type="date" id="eventDate" name="eventDate" class="form-control" required>
+                <span class="field-error-msg" id="eventDateError" style="display: none;"></span>
+              </div>
+              <div class="form-group">
+                <label for="guestCount">Estimated Guest Count</label>
+                <input type="number" id="guestCount" name="guestCount" class="form-control" placeholder="e.g. 180 guests">
+              </div>
+            </div>
+
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label for="venueName">Venue Name &amp; City *</label>
+                <input type="text" id="venueName" name="venueName" class="form-control" placeholder="e.g. The Langham, Pasadena" required>
+                <span class="field-error-msg" id="venueNameError" style="display: none;"></span>
+              </div>
+              <div class="form-group">
+                <label for="budgetBracket">Estimated Production Budget</label>
+                <select id="budgetBracket" name="budgetBracket" class="form-control">
+                  <option value="2000-4000">$2,000 &ndash; $4,000 (Essential Uplighting &amp; Accents)</option>
+                  <option value="4000-8000" selected>$4,000 &ndash; $8,000 (Full Uplighting + Chiffon Canopy)</option>
+                  <option value="8000-15000">$8,000 &ndash; $15,000 (Complete Ballroom Metamorphosis)</option>
+                  <option value="15000+">$15,000+ (Full Structural Rigging &amp; Grand Galas)</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Step 3: Desired Services Checkboxes -->
+            <div class="form-group">
+              <label>Lighting &amp; Draping Elements You Are Interested In:</label>
+              <div class="services-checkbox-grid">
+                <label class="checkbox-tile checked">
+                  <input type="checkbox" name="services" value="Architectural Uplighting" checked>
+                  <span>Perimeter Uplighting</span>
+                </label>
+                <label class="checkbox-tile checked">
+                  <input type="checkbox" name="services" value="Ceiling Chiffon Draping" checked>
+                  <span>Ceiling Chiffon Canopy</span>
+                </label>
+                <label class="checkbox-tile">
+                  <input type="checkbox" name="services" value="Perimeter Wall Draping">
+                  <span>Wall Fabric Wrapping</span>
+                </label>
+                <label class="checkbox-tile">
+                  <input type="checkbox" name="services" value="Fairy Light Sea Canopy">
+                  <span>Fairy / Bistro Strings</span>
+                </label>
+                <label class="checkbox-tile">
+                  <input type="checkbox" name="services" value="Centerpiece Pin-Spotting">
+                  <span>Floral Pin-Spotting</span>
+                </label>
+                <label class="checkbox-tile">
+                  <input type="checkbox" name="services" value="Crystal Chandeliers">
+                  <span>Crystal Chandeliers</span>
+                </label>
+                <label class="checkbox-tile">
+                  <input type="checkbox" name="services" value="Monogram Gobo Projection">
+                  <span>Monogram Gobo</span>
+                </label>
+                <label class="checkbox-tile">
+                  <input type="checkbox" name="services" value="Dancing On A Cloud FX">
+                  <span>Dancing On A Cloud</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Step 4: Links & Notes -->
+            <div class="form-group">
+              <label for="inspoLink">Pinterest Board, Floorplan or Inspiration URL (Optional)</label>
+              <input type="url" id="inspoLink" name="inspoLink" class="form-control" placeholder="https://pinterest.com/your-event-board">
+            </div>
+
+            <div class="form-group">
+              <label for="message">Tell Us About Your Vision &amp; Notes</label>
+              <textarea id="message" name="message" class="form-control" placeholder="Share color schemes, venue notes, or lighting preferences..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%; padding: 16px;">
+              <span>Submit Lighting Design Enquiry</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Studio Location & Interactive Map Section -->
+    <section class="studio-map-section" id="location-map">
+      <div class="container">
+        <div class="map-card-container">
+          <!-- Map Header with Title and Quick Directions Action -->
+          <div class="map-header-bar">
+            <div class="map-title-group">
+              <div class="eyebrow">
+                <span class="eyebrow-dot"></span> Studio Headquarters &amp; Warehouse
+              </div>
+              <h2 class="map-main-title">Visit Our <span class="glow-text">Design Studio</span></h2>
+              <p class="map-address-subtext">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                <span>742 Luminous Way, Suite 400, Design District, Los Angeles, CA 90048</span>
+              </p>
+            </div>
+            <div class="map-actions-group">
+              <a href="https://maps.google.com/?q=34.0825,-118.3825(LUMINA+%26+VEIL+Design+Studio)" target="_blank" rel="noopener noreferrer" class="btn btn-outline map-directions-btn" aria-label="Open in Google Maps">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="3 11 22 2 13 21 11 13 3 11"></polygon></svg>
+                <span>Get Google Directions</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Interactive Map Frame / Viewport -->
+          <div class="map-viewport-wrapper">
+            <div id="contactMap" class="contact-interactive-map" role="region" aria-label="Interactive map showing LUMINA and VEIL studio location"></div>
+            <!-- Fallback if JS or CDN is disabled -->
+            <noscript>
+              <iframe
+                title="LUMINA &amp; VEIL Studio Location"
+                class="contact-map-fallback-frame"
+                src="https://www.openstreetmap.org/export/embed.html?bbox=-118.3975%2C34.0725%2C-118.3675%2C34.0925&amp;layer=mapnik&amp;marker=34.0825%2C-118.3825"
+                loading="lazy">
+              </iframe>
+            </noscript>
+          </div>
+
+          <!-- Studio Facility Highlights Grid -->
+          <div class="map-highlights-grid">
+            <div class="map-highlight-item">
+              <div class="highlight-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              </div>
+              <div class="highlight-info">
+                <strong>Showroom &amp; Consultation Hours</strong>
+                <span>Monday &ndash; Friday: 9:00 AM &ndash; 6:00 PM PST<br>Weekend Consultations by Private Appointment</span>
+              </div>
+            </div>
+
+            <div class="map-highlight-item">
+              <div class="highlight-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1 .4-1 1v7c0 .6.4 1 1 1h2"></path><circle cx="7" cy="17" r="2"></circle><path d="M9 17h6"></path><circle cx="17" cy="17" r="2"></circle></svg>
+              </div>
+              <div class="highlight-info">
+                <strong>Client Valet &amp; Freight Dock</strong>
+                <span>Complimentary valet at main entrance.<br>Dedicated ground-floor loading dock for venue freight.</span>
+              </div>
+            </div>
+
+            <div class="map-highlight-item">
+              <div class="highlight-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"></polygon><line x1="8" y1="2" x2="8" y2="18"></line><line x1="16" y1="6" x2="16" y2="22"></line></svg>
+              </div>
+              <div class="highlight-info">
+                <strong>Regional Dispatch Coverage</strong>
+                <span>Greater Los Angeles, Beverly Hills, Malibu, Orange County, Santa Barbara, Palm Springs &amp; Worldwide Destination.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Accordion Section -->
+    <section class="faq-section">
+      <div class="container">
+        <div class="section-header">
+          <div class="eyebrow">
+            <span class="eyebrow-dot"></span> Common Questions
+          </div>
+          <h2>Frequently Asked <span class="glow-text">Questions</span></h2>
+          <p>Everything you need to know about our event lighting and draping process.</p>
+        </div>
+
+        <div class="faq-accordion">
+          <!-- Item 1 -->
+          <div class="faq-item active">
+            <div class="faq-question">
+              <h4>How far in advance should we reserve our event date?</h4>
+              <svg class="faq-chevron" viewBox="0 0 24 24" fill="currentColor"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>
+            </div>
+            <div class="faq-answer">
+              <p>We accept bookings up to 18 months in advance. Peak wedding and gala dates (May through October and December) frequently sell out 6 to 9 months prior. We recommend securing your date as soon as your venue contract is finalized.</p>
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="faq-item">
+            <div class="faq-question">
+              <h4>Are your draping fabrics certified for strict venue fire codes?</h4>
+              <svg class="faq-chevron" viewBox="0 0 24 24" fill="currentColor"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>
+            </div>
+            <div class="faq-answer">
+              <p>Yes, absolutely. 100% of our sheer chiffon, poly-premier, and velour fabrics are Inherently Flame Retardant (IFR) and carry NFPA 701 and California Title 19 certifications. We proactively provide these test certificates to your venue and local fire marshal.</p>
+            </div>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="faq-item">
+            <div class="faq-question">
+              <h4>Do you handle setup, live programming, and post-event teardown?</h4>
+              <svg class="faq-chevron" viewBox="0 0 24 24" fill="currentColor"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>
+            </div>
+            <div class="faq-answer">
+              <p>Yes. Every proposal includes full white-glove delivery, structural rigging, color temperature balancing, on-site DMX scene direction throughout your dinner and reception, and complete post-event strike so your venue is left spotless.</p>
+            </div>
+          </div>
+
+          <!-- Item 4 -->
+          <div class="faq-item">
+            <div class="faq-question">
+              <h4>Can your fixtures operate without running cords across guest walkways?</h4>
+              <svg class="faq-chevron" viewBox="0 0 24 24" fill="currentColor"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>
+            </div>
+            <div class="faq-answer">
+              <p>Yes. Our entire uplighting, pin-spotting, and accent lighting fleet is 100% wireless and battery-powered with integrated wireless DMX control. This eliminates hazardous cables, taped floors, and ugly power strips from your celebration.</p>
+            </div>
+          </div>
+
+          <!-- Item 5 -->
+          <div class="faq-item">
+            <div class="faq-question">
+              <h4>Can we see a 3D visualization of our venue before committing?</h4>
+              <svg class="faq-chevron" viewBox="0 0 24 24" fill="currentColor"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>
+            </div>
+            <div class="faq-answer">
+              <p>Yes! For all full-scale ballroom transformations, our lighting architects build an accurate 3D CAD simulation based on your venue's actual architectural blueprints, allowing you to preview the exact illumination angles and color temperatures in advance.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Success Confirmation Modal -->
+    <div class="modal-overlay" id="inquirySuccessModal" role="dialog" aria-modal="true" aria-label="Enquiry Submission Confirmation">
+      <div class="modal-box">
+        <div class="modal-success-icon">
+          <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+        </div>
+        <div class="eyebrow" style="margin-bottom: 10px;">
+          <span class="eyebrow-dot"></span> Proposal Request Received
+        </div>
+        <h3 style="margin-bottom: 8px;">Thank You, <span class="modal-client-name glow-text">Client</span>!</h3>
+        <p style="font-size: 0.95rem; margin-bottom: 24px;">
+          Your custom event lighting enquiry has been successfully logged into our studio system.
+        </p>
+
+        <div style="background: rgba(255, 255, 255, 0.04); border: 1px solid var(--border-subtle); border-radius: var(--radius-sm); padding: 18px; text-align: left; margin-bottom: 24px;">
+          <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+            <span style="color: var(--text-muted); font-size: 0.85rem;">Reference Code:</span>
+            <strong class="modal-ref-code glow-text">LUM-000000</strong>
+          </div>
+          <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+            <span style="color: var(--text-muted); font-size: 0.85rem;">Venue:</span>
+            <strong class="modal-venue-name" style="color: #ffffff; font-size: 0.85rem;">Venue Name</strong>
+          </div>
+          <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+            <span style="color: var(--text-muted); font-size: 0.85rem;">Target Date:</span>
+            <strong class="modal-event-date" style="color: #ffffff; font-size: 0.85rem;">Event Date</strong>
+          </div>
+          <div style="display: flex; justify-content: space-between;">
+            <span style="color: var(--text-muted); font-size: 0.85rem;">Requested Look:</span>
+            <span class="modal-services-summary" style="color: #ffffff; font-size: 0.85rem; text-align: right; max-width: 250px;">Services</span>
+          </div>
+        </div>
+
+        <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 24px;">
+          A senior lighting designer will review your venue specifications and email you a customized proposal within 24 business hours.
+        </p>
+
+        <button type="button" class="btn btn-primary" id="modalCloseBtn" style="width: 100%;">
+          Close Window
+        </button>
+      </div>
+    </div>
+  </main>
+
+      <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="brand-logo" style="margin-bottom: 16px;" aria-label="Lumina and Veil Home">
+            <div class="brand-icon">
+              <svg viewBox="0 0 24 24"><path d="M12 2a1 1 0 0 1 1 1v2.07c3.61.45 6.48 3.32 6.93 6.93H22a1 1 0 0 1 0 2h-2.07c-.45 3.61-3.32 6.48-6.93 6.93V21a1 1 0 0 1-2 0v-2.07c-3.61-.45-6.48-3.32-6.93-6.93H2a1 1 0 0 1 0-2h2.07c.45-3.61 3.32-6.48 6.93-6.93V3a1 1 0 0 1 1-1z"/></svg>
+            </div>
+            <div class="brand-text">
+              LUMINA &amp; VEIL
+              <span>Event Lighting &amp; Draping</span>
+            </div>
+          </a>
+          <p>Custom architectural illumination, bespoke ceiling draping, and theatrical scenography for luxury weddings, galas, and corporate showcases.</p>
+          <p class="glow-text" style="font-weight: 600;">Certified NFPA 701 &bull; $5M Insured &bull; ETCP Rigging</p>
+          <div class="footer-social-wrapper">
+            <span class="footer-social-label">Follow Our Work</span>
+            <div class="footer-social-links">
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Instagram" title="Follow Lumina &amp; Veil on Instagram">
+                <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+              </a>
+              <a href="https://pinterest.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Pinterest" title="Inspiration Boards on Pinterest">
+                <svg viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.372-12 12 0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738.098.119.112.224.083.345-.09.375-.291 1.199-.332 1.357-.053.211-.174.268-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.631-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146 1.124.347 2.317.535 3.554.535 6.627 0 12-5.373 12-12 0-6.628-5.373-12-12-12z"/></svg>
+              </a>
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Facebook" title="Lumina &amp; Veil on Facebook">
+                <svg viewBox="0 0 24 24"><path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"/></svg>
+              </a>
+              <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="YouTube" title="Lighting Showcases on YouTube">
+                <svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+              </a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="LinkedIn" title="Corporate Portfolio on LinkedIn">
+                <svg viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Architectural Lighting</a></li>
+            <li><a href="home-2.html">Fabric Draping</a></li>
+            <li><a href="services.html">Services &amp; Uplighting</a></li>
+            <li><a href="gallery.html">Visual Portfolio</a></li>
+            <li><a href="about.html">About The Studio</a></li>
+            <li><a href="contact.html">Request A Proposal</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Lighting &amp; Draping</h4>
+          <ul class="footer-links">
+            <li><a href="services.html#uplighting">Wireless RGBAW+UV Uplighting</a></li>
+            <li><a href="services.html#draping">Ceiling Canopies &amp; Wall Draping</a></li>
+            <li><a href="services.html#fairylights">Fairy Light &amp; Bistro Canopies</a></li>
+            <li><a href="services.html#chandeliers">Chandelier Rigging &amp; Pin-Spots</a></li>
+            <li><a href="services.html#gobo">Custom Monogram Gobos</a></li>
+            <li><a href="services.html#fx">Dancing on a Cloud FX</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Studio &amp; Inquiries</h4>
+          <ul class="footer-contact-list">
+            <li>
+              <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              <a href="contact.html#location-map" class="footer-map-link">742 Luminous Way, Design District, CA</a>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24"><path d="M20 15.5c-1.25 0-2.45-.2-3.57-.57a1.02 1.02 0 0 0-1.02.24l-2.2 2.2a15.045 15.045 0 0 1-6.59-6.59l2.2-2.21a.96.96 0 0 0 .25-1A11.36 11.36 0 0 1 8.5 4c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.5c0-.55-.45-1-1-1z"/></svg>
+              (800) 586-4621 &bull; Studio Direct
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+              concierge@lumina-veil.com
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" style="color: inherit;">@lumina_veil &bull; Studio Instagram</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 LUMINA &amp; VEIL Event Lighting &amp; Draping Design Company. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="privacy-policy.html">Privacy Policy</a>
+          <a href="rigging-terms.html">Venue Rigging Terms</a>
+          <a href="safety-certificates.html">Fire Safety Certificates</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="script.js"></script>
+</body>
+</html>
