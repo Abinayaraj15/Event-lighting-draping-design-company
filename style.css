@@ -3202,12 +3202,20 @@ textarea.form-control {
 .cta-banner h2 {
   font-size: clamp(2rem, 3.8vw, 3.2rem);
   margin-bottom: 18px;
+  color: #ffffff;
 }
 
 .cta-banner p {
   max-width: 640px;
   margin: 0 auto 36px auto;
   font-size: 1.1rem;
+  color: rgba(248, 250, 252, 0.88);
+}
+
+.cta-banner .btn-outline {
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.35);
+  background: rgba(255, 255, 255, 0.05);
 }
 
 .cta-buttons {
@@ -4417,6 +4425,59 @@ textarea.form-control {
   border-color: var(--glow-primary);
   color: var(--glow-primary);
   box-shadow: 0 4px 14px rgba(184, 134, 11, 0.2);
+}
+
+/* Light Mode - Call to Action Banner High Visibility */
+[data-theme="light"] .cta-banner {
+  background: linear-gradient(135deg, #111724 0%, #0a0e18 100%);
+  border: 1px solid rgba(184, 134, 11, 0.45);
+  box-shadow: 0 25px 60px rgba(25, 20, 15, 0.16), 0 0 35px rgba(184, 134, 11, 0.22);
+}
+
+[data-theme="light"] .cta-banner::before {
+  background: radial-gradient(circle, rgba(184, 134, 11, 0.35) 0%, transparent 70%);
+}
+
+[data-theme="light"] .cta-banner h2 {
+  color: #ffffff !important;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
+}
+
+[data-theme="light"] .cta-banner h2 .glow-text,
+[data-theme="light"] .cta-banner .glow-text {
+  color: #f5b942 !important;
+  text-shadow: 0 0 24px rgba(245, 185, 66, 0.55), 0 1px 3px rgba(0, 0, 0, 0.6) !important;
+}
+
+[data-theme="light"] .cta-banner p {
+  color: #e2e8f0 !important;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.4);
+}
+
+[data-theme="light"] .cta-banner .btn-outline {
+  background: rgba(255, 255, 255, 0.08) !important;
+  color: #ffffff !important;
+  border-color: rgba(255, 255, 255, 0.42) !important;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+}
+
+[data-theme="light"] .cta-banner .btn-outline:hover {
+  background: linear-gradient(135deg, #d4a036, #b8860b) !important;
+  color: #0c1019 !important;
+  border-color: var(--glow-primary) !important;
+  box-shadow: 0 8px 24px rgba(184, 134, 11, 0.45) !important;
+}
+
+[data-theme="light"] .cta-banner .btn-primary {
+  color: #ffffff !important;
+  background: linear-gradient(135deg, #d4a036 0%, #b8860b 100%) !important;
+  box-shadow: 0 4px 22px rgba(184, 134, 11, 0.45) !important;
+}
+
+[data-theme="light"] .cta-banner .btn-primary:hover {
+  background: linear-gradient(135deg, #e5b34a 0%, #c99313 100%) !important;
+  box-shadow: 0 8px 28px rgba(184, 134, 11, 0.6) !important;
 }
 
 [dir="rtl"] .footer-social-links {
