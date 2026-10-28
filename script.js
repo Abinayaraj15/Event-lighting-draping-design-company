@@ -139,7 +139,16 @@ function initMobileNav() {
 
   if (!toggleBtn || !navMenu) return;
 
-  toggleBtn.addEventListener('click', () => {
+  // Ensure mobile CTA button exists inside the drawer for seamless mobile access
+  if (!navMenu.querySelector('.mobile-menu-cta')) {
+    const ctaItem = document.createElement('li');
+    ctaItem.className = 'nav-item mobile-menu-cta';
+    ctaItem.innerHTML = '<a href="contact.html" class="btn btn-primary">Request Proposal</a>';
+    navMenu.appendChild(ctaItem);
+  }
+
+  toggleBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
     const isOpen = navMenu.classList.toggle('open');
     toggleBtn.setAttribute('aria-expanded', isOpen);
     toggleBtn.innerHTML = isOpen ? '&times;' : '&#9776;';
@@ -151,6 +160,7 @@ function initMobileNav() {
     link.addEventListener('click', () => {
       navMenu.classList.remove('open');
       toggleBtn.innerHTML = '&#9776;';
+      toggleBtn.setAttribute('aria-expanded', 'false');
     });
   });
 
@@ -159,6 +169,25 @@ function initMobileNav() {
     if (!navMenu.contains(e.target) && !toggleBtn.contains(e.target) && navMenu.classList.contains('open')) {
       navMenu.classList.remove('open');
       toggleBtn.innerHTML = '&#9776;';
+      toggleBtn.setAttribute('aria-expanded', 'false');
+    }
+  });
+
+  // Close on Escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && navMenu.classList.contains('open')) {
+      navMenu.classList.remove('open');
+      toggleBtn.innerHTML = '&#9776;';
+      toggleBtn.setAttribute('aria-expanded', 'false');
+    }
+  });
+
+  // Reset when resizing to desktop
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 992 && navMenu.classList.contains('open')) {
+      navMenu.classList.remove('open');
+      toggleBtn.innerHTML = '&#9776;';
+      toggleBtn.setAttribute('aria-expanded', 'false');
     }
   });
 }
